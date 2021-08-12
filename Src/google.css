@@ -1,0 +1,105 @@
+@font-face {
+    font-family: product;
+    src: url(./Product\ Sans\ Regular.ttf);
+}
+body {
+    background-color: black;
+    background-image: url(./fundoGoogle.jpg);
+    background-color: rgb(53, 53, 53);
+    background-size: 1600px;
+    max-width: 100%;
+    max-height: 100%;
+    }   
+
+h1 {
+    color: #EEEEEE;
+    font-family:'product';
+    font-size: 80px;
+    text-align: center;
+}
+
+p {
+    font-family: 'product';
+    color: white;
+}
+
+.direita {
+    text-align: right;
+    font-family: 'product';
+}
+
+a {
+    font-family: 'product';
+    color: white;
+    text-decoration: none;  
+    font-size: 12px;
+    padding:20px;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+}
+
+img {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+}
+
+input{
+    position: absolute;
+    left: 470px;
+    text-align: center;
+    border-radius: 20px;
+    width: 350px;
+    height: 35px;
+    border: none;
+}
+
+.pesq {
+    position: absolute;
+    left: 480px;
+    text-align: center;
+    border: none;
+}
+
+.voz {
+    position: absolute;
+    left: 790px;
+    text-align: center;
+    border: none;
+}
+
+.icons {
+    background-color: #ffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.cima {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.baixo {
+    display: inline-block;
+    margin: 20px;
+    margin-top: -20px;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+.sem{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: none;
+}
