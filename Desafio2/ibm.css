@@ -1,0 +1,16 @@
+@font-face {
+    font-family:IBM ;
+    src: url(./IBMPlexSans-Regular.ttf);
+}
+
+* {
+    font-family: "IBM";
+    color: #ffff;
+}
+.black {
+    background-color: #000000;
+}
+
+a:hover {
+    color: #0062ff;
+}
