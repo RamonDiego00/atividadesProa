@@ -11,19 +11,34 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
 
 	<!-- JavaScript Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"> </script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+	<script>
+		$(document).ready(function() {
+			$('.card').mouseover(function() {
+			$(this).toggleClass('shadow-lg')
+		})
+		})
+		
+	</script>
+
+	<style>
+		.card {
+			transition: 1s;
+		}
+	</style>
   </head>
   <body>
   	<!-- Cookies - Utilies/Flex -->
-  	<div class="bg-light p-3">
+  	<div class="bg-light p-3" id="cookies-container">
   		<div class="container d-flex justify-content-between align-items-center">
 	  		<div>
 	  			<span class="small"><i class="bi bi-exclamation-circle"></i> Usamos cookies para aprimorar sua experiência em nossos sites e para fins de publicidade. <a href="">Política de Privacidade</a></span>
 	  		</div>
 	  		<div>
-		  		<span class="btn btn-secondary">Aceitar tudo</span>
-		  		<span class="btn btn-secondary">Gerenciar cookies</span>
+		  		<span class="btn btn-dark" id="btn-aceitar-cookies" onclick="$('#cookies-container').hide();">Aceitar tudo</span>
+		  		<span class="btn btn-dark" id="btn-gerenciar-cookies">Gerenciar cookies</span>
 		  	</div>
 	  	</div>
   	</div>
