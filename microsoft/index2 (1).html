@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Microsoft - Nuvem, aplicativos e jogos</title>
+    <meta charset="utf-8">
+    <link rel="SHORTCUT ICON" href="_img/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap Icon-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="_css/style.css" rel="stylesheet">
+
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="_js/meu-arquivo-js.js"></script>
+
+
+  <style>
+    .container
+    {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    /* media query */
+    @media (min-width: 576px)
+    {
+      .container, .container-sm
+      {
+          max-width: 540px;
+      }
+    }
+
+    @media (min-width: 768px)
+    {
+      .container, .container-md, .container-sm
+      {
+          max-width: 720px;
+      }
+    }
+
+    @media (min-width: 992px)
+    {
+      .container, .container-lg, .container-md, .container-sm {
+          max-width: 960px;
+      }
+    }
+
+    @media (min-width: 1200px)
+    {
+      .container, .container-lg, .container-md, .container-sm, .container-xl {
+          max-width: 1140px;
+      }
+    }
+
+    header nav a,
+    footer nav a 
+    {
+      text-decoration: underline;
+    }
+
+    .clicado {
+      background-color: #333 !important;
+      color: #f2f2f2;
+    }
+    .shadow-lg {
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.375)!important;
+    }
+    .card {
+      transition: .3s;
+    }
+    .card:hover h5 {
+      text-decoration: underline;
+    }
+
+    .decoration {
+      color: #333;
+      text-decoration: none;
+      background-color: #9999;
+      margin: 1.5rem;
+      padding: 1.5rem;
+    }
+    .decoration:hover {
+      color: rgb(10, 10, 10);
+      text-decoration: underline;
+      padding: 1rem;
+      margin: 1rem;
+      box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.24);
+    }
+
+    a  {
+      color: inherit;
+    }
+  </style>
+
+  <script>
+    $( document ).ready(function() {
+      $("#cookies-container").mouseover( function() {
+        /*
+        $('#cookies-container').toggleClass('bg-dark bg-light text-light');
+        $('#cookies-container button').toggleClass('btn-dark btn-light');
+        */
+        $('#cookies-container').addClass('clicado');
+      });
+      $("#cookies-container").mouseleave( function() {
+        $('#cookies-container').removeClass('clicado');
+      });
+
+      $('.card').mouseover( function() {
+        $(this).addClass('shadow-lg');
+        $(this).removeClass('m-2');
+      });
+      $('.card').mouseleave( function() {
+        $(this).removeClass('shadow-lg');
+        $(this).addClass('m-2');
+      });
+    });
+  </script>
+  </head>
+  <body>
+  	<!-- Cookies - Utilies/Flex -->
+    <div class="bg-light py-3" id="cookies-container">
+      <div class="container d-block d-xl-flex justify-content-between align-items-center">
+        <div>
+          <small><i class="bi bi-info-circle"></i> Usamos cookies para aprimorar sua experiência em nossos sites e para fins de publicidade. <a href="">Política de Privacidade</a></small>
+        </div>
+        <div style="width: 270px;">
+          <button class="btn btn-dark" id="btn-aceitar-cookies">Aceitar tudo</button>
+          <button class="btn btn-dark" id="btn-gerenciar-cookies">Gerenciar cookies</button>
+        </div>
+      </div>
+    </div>
+
+  	<!-- Menu - Utilies/Flex + Components/Navbar + Components/Dropdowns  -->
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="_img/logo.png" height="25">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#carouselExampleIndicators">Microsoft 365</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Office</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Windows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Xbox</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Suporte</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Toda a Microsoft
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="d-inline d-lg-none d-xl-inline">Pesquisar</span> <i class="bi bi-search"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="d-lg-none d-xl-inline">Carrinho</span> <i class="bi bi-cart3"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="d-lg-none d-xl-inline">Entrar</span> <i class="bi bi-person-plus"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+	<!-- Banner, Slider, Carrossel - Components/Carousel + Layout/Grid -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div>
+          <div class="container" style="background-color: #f2f2f2">
+            <div class="row">
+              <div class="col-6 p-5">
+                <h1>Aprenda seu jeito</h1>
+                <p>Volte às aulas com o Microsoft 365 e desfrute de Aplicativos premium do Microsoft 365, armazenamento na nuvem, segurança avançada e mais.</p>
+                <button class="btn btn-dark">Escolha seu plano ideal <i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="col-6 p-5">
+                <img src="_img/banner1.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div>
+          <div class="container" style="background-color: #e6e6e6">
+            <div class="row">
+              <div class="col-6 p-5">
+                <h1>Microsoft 365</h1>
+                <p>Aplicativo premium do Office, armazenamento extra na nuvem, segurança avançada e muito mais. Tudo em uma conveniente assinatura</p>
+                <button class="btn btn-dark">Para até 6 pessoas <i class="bi bi-chevron-right"></i></button>
+                <button class="btn btn-dark">Para 1 pessoa <i class="bi bi-chevron-right"></i></button>
+              </div>
+              <div class="col-6 p-5">
+                <img src="_img/banner2.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+	<!-- Produtos - Utilies/Flex -->
+  <div>
+    <div class="container d-flex justify-content-center align-items-start text-center">
+      <a href="" class="p-4 m-4 decoration">
+      <div>
+        <img src="_img/365.png">
+        <p>Escolha seu<br />Microsoft 365</p>
+      </div>
+    </a>
+    <a href="" class="p-4 m-4 decoration">
+      <div>
+        <img src="_img/xbox.webp">
+        <p>Comprar o Xbox</p>
+      </div>
+    </a>
+      <a href="" class="p-4 m-4 decoration">
+      <div>
+        <img src="_img/windows.webp">
+        <p>Adquira o<br />Windows 10</p>
+      </div>
+      </a>
+    </div>
+  </div>
+
+	<!-- Notícias - Layout/Grid -->
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="card m-2">
+            <img src="_img/gamepass.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-link">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-2">
+            <img src="_img/gamepass.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-link">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-2">
+            <img src="_img/gamepass.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-link">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card m-2">
+            <img src="_img/gamepass.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-link">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
