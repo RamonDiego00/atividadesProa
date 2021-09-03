@@ -12,7 +12,7 @@ function calcular_juros() {
 
 
     // Processamento de Dados
-    juros = Number (c* Math.pow((1 + i),t)).toFixed(-2)
+    juros = Number (c* Math.pow((1 + i),t)).toFixed(2)
     juros.toString()
     
     
