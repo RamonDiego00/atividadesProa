@@ -1,3 +1,18 @@
+*{
+    font-family:google;
+    color: black;
+}
+
+body {
+        background: linear-gradient(180deg, #a8ccda,#62a8c4);
+        
+}
+
+@font-face {
+    font-family: google;
+    src: url(/Meu_Blog/public/Product\ Sans\ Regular.ttf);
+}
+
 @font-face {
     font-family: anime;
     src: url(/Meu_Blog/public/Hakubo\ Free\ Trial.otf);
@@ -15,26 +30,76 @@
     src: url(/Meu_Blog/public/varsity_regular.ttf);
 }
 @font-face {
-    font-family: food;
-    src: url(/Meu_Blog/public/);
+    font-family: livro;
+    src: url(/Meu_Blog/public/CloisterBlack.ttf);
 }
 @font-face {
-    font-family: food;
-    src: url(/Meu_Blog/public/);
+    font-family: viagem;
+    src: url(/Meu_Blog/public/KGALittleSwag.ttf);
 }
 @font-face {
-    font-family: food;
-    src: url(/Meu_Blog/public/);
+    font-family: music;
+    src: url(/Meu_Blog/public/Royalacid_o.ttf);
 }
 @font-face {
-    font-family: food;
-    src: url(/Meu_Blog/public/);
+    font-family: prof;
+    src: url(/Meu_Blog/public/CourierPrime-Regular.ttf);
 }
 @font-face {
     font-family: food;
     src: url(/Meu_Blog/public/Quarts\ Pachino\ Demo\ Version.otf);
 }
 @font-face {
+    font-family: roup;
+    src: url(/Meu_Blog/public/THE_JACATRA.otf);
+}
+
+a {
+    text-decoration: none;
+}
+
+.espa {
+    padding: 60px;
+    border-bottom: 2px dashed black;
+    
+}
+.esquerda {
+    border-right: 2px dashed black;
+    border-bottom: 2px dashed black;
+    
+}
+
+.titulo {
+    border-bottom: 2px dashed black;
+}
+
+.anime {
+    font-family: anime;
+}
+.artistas {
+    font-family: artic;
+}
+.filmes {
+    font-family: filmes;
+}
+.hoobies {
+    font-family: hoobie;
+}
+.livros {
+    font-family: livro;
+}
+.lugares {
+    font-family: viagem;
+}
+.musicas {
+    font-family: music;
+}
+.profissao {
+    font-family: prof;
+}
+.receitas {
     font-family: food;
-    src: url(/Meu_Blog/public/);
+}
+.roupas {
+    font-family: roup;
 }
