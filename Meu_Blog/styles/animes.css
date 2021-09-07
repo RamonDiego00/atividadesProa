@@ -14,13 +14,5 @@
 }
 
 .fundo {
-    background-color: #aada86 ;
-}
-
-.blur {
-    background-image:  url(../public/FundoAnime.jpg);
-     filter: opacity(30%); 
-     height: 250px;
-     background-size: cover;
-     background-repeat: no-repeat;
+    background-color: #eeee ;
 }
