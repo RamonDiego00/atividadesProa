@@ -9,10 +9,14 @@
 }
 
 @font-face {
-    font-family: anime;
-    src: url(/Meu_Blog/public/Hakubo\ Free\ Trial.otf);
+    font-family: roup;
+    src: url(/Meu_Blog/public/THE_JACATRA.otf);
 }
 
 .fundo {
     background-color: #eeee ;
+}
+
+h1 {
+    font-family: roup;
 }

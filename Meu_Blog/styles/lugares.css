@@ -9,10 +9,14 @@
 }
 
 @font-face {
-    font-family: anime;
-    src: url(/Meu_Blog/public/Hakubo\ Free\ Trial.otf);
+    font-family: viagem;
+    src: url(/Meu_Blog/public/KGALittleSwag.ttf);
 }
 
 .fundo {
     background-color: #eeee ;
+}
+
+h1 {
+    font-family: viagem;
 }

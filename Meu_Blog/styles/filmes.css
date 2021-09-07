@@ -9,10 +9,13 @@
 }
 
 @font-face {
-    font-family: anime;
-    src: url(/Meu_Blog/public/Hakubo\ Free\ Trial.otf);
+    font-family: filmes;
+    src: url(/Meu_Blog/public/BebasNeue-Regular.otf);
 }
 
 .fundo {
     background-color: #eeee ;
+}
+h1 {
+    font-family: filmes;
 }
