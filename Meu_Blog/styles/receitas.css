@@ -9,10 +9,14 @@
 }
 
 @font-face {
-    font-family: anime;
-    src: url(/Meu_Blog/public/Hakubo\ Free\ Trial.otf);
+    font-family: food;
+    src: url(/Meu_Blog/public/Quarts\ Pachino\ Demo\ Version.otf)
 }
 
 .fundo {
     background-color: #eeee ;
+}
+
+h1 {
+    font-family: food;
 }
