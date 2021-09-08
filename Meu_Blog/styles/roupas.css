@@ -1,7 +1,14 @@
 *{
-    font-family:google;
+    font-family:google,roboto;
     color: black;
 }
+
+@font-face {
+    font-family:roboto ;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
+
 
 @font-face {
     font-family: google;
