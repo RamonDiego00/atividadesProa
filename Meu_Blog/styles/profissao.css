@@ -14,10 +14,14 @@
 }
 
 @font-face {
-    font-family: anime;
-    src: url(/Meu_Blog/public/Hakubo\ Free\ Trial.otf);
+    font-family: prof;
+    src: url(/Meu_Blog/public/CourierPrime-Regular.ttf);
 }
 
 .fundo {
     background-color: #eeee ;
+}
+
+h1 {
+    font-family: prof;
 }
