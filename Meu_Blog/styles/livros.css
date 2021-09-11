@@ -13,10 +13,14 @@
 }
 
 @font-face {
-    font-family: anime;
-    src: url(/Meu_Blog/public/Hakubo\ Free\ Trial.otf);
+    font-family: livro;
+    src: url(/Meu_Blog/public/CloisterBlack.ttf);
 }
 
 .fundo {
     background-color: #eeee ;
+}
+
+h1 {
+    font-family: livro;
 }

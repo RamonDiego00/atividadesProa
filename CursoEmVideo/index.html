@@ -17,7 +17,14 @@
     header{
         background-color: #2222FF;
         color: #ffff;
-        padding: 5px;
+        padding: 20px 20px 0px 20px;
+        margin: 0px;
+        background-image: url(./public/fundo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 0px;
+        background-attachment: scroll;
     }
     .logo{
         height: 54px;
@@ -52,10 +59,15 @@
     .cor-branca {
         color: #ffff;
     }
-    
     </style>
     <script>
     /* JS */
+    $(document).scroll(function() {
+        scroll = $(document).scrollTop()
+        console.log($(document).scrollTop());
+        $("header").css("backgroundPositionY", scroll/2);
+        $("h1").css("backgroundPositionY", scroll/2);
+    })
     </script>
     </head>
         <body>
@@ -86,5 +98,6 @@
                     </div>
                 </div>
             </header>
+            <div style="height: 1000px;"></div>
         </body>
     </html>
