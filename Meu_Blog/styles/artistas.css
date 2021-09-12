@@ -14,10 +14,14 @@
 }
 
 @font-face {
-    font-family: anime;
-    src: url(/Meu_Blog/public/Hakubo\ Free\ Trial.otf);
+    font-family: artic;
+    src: url(/Meu_Blog/public/GoldenHopes_PERSONAL_USE_ONLY.otf);
 }
 
 .fundo {
     background-color: #eeee ;
+}
+
+h1 {
+    font-family: artic;
 }
