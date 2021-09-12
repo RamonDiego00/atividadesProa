@@ -59,6 +59,20 @@
     .cor-branca {
         color: #ffff;
     }
+    .preto {
+        position: absolute;
+	    top: 173px;
+	    z-index: -1;
+        background-position-y: 0px;
+        background-attachment: scroll;
+        color: black;
+    }
+    .branco {
+        position: relative;
+	    top: -180px;
+	    z-index: -1;
+        color: #ffff;
+    }
     </style>
     <script>
     /* JS */
@@ -67,6 +81,21 @@
         console.log($(document).scrollTop());
         $("header").css("backgroundPositionY", scroll/2);
         $("h1").css("backgroundPositionY", scroll/2);
+        var teste = $(this).scrollTop()
+        $(".preto").css("left", parseInt(teste));
+
+//         $(window).scroll(function() {
+//     var x = $(this).scrollTop();
+//     $('#box').css('left', parseInt(+x) );
+//     if(x<100){
+//       $('#box').css('background', 'red' );
+//     }else if(x<200){
+//       $('#box').css('background', 'green' );
+//     }else{
+//       $('#box').css('background', 'blue' );
+//     }
+// });
+        
     })
     </script>
     </head>
@@ -90,6 +119,8 @@
                     <div class="row align-items-center">
                         <div class="col-6">
                             <h1 class="main-title">Paixão por <span class="cor-branca">ensinar.</span></h1>
+                            <h1 class="main-title preto" >Paixão por </h1>
+                            <h1 class="main-title branco">Paixão por </h1>
                             <p>estude gratuitamente e aprenda com professores de qualidade</p>
                         </div>
                         <div class="col-6">
