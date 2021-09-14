@@ -16,6 +16,8 @@ function tema() {
         $(".cont").toggleClass("text-dark");
         $(".carro").toggleClass("text-dark");
         $(".carro").toggleClass("text-white");
+        $(".games").toggleClass("bg-ligth");
+        $(".games").toggleClass("bg-secodary");
         
         
 }
