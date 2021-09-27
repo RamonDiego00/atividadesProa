@@ -1,5 +1,3 @@
-import React from "react";
-import image from 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.techtudo.com.br%2Fdicas-e-tutoriais%2F2018%2F05%2Fsaiba-como-jogar-free-fire-battlegrounds-o-jogo-online-da-garena.ghtml&psig=AOvVaw23o9XrRS5EvK2S2PJn7tWQ&ust=1632499259672000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOiErua7lfMCFQAAAAAdAAAAABAD'
 
 function Header() {
     return (
@@ -7,6 +5,19 @@ function Header() {
             <h1 className="text-center">Playstation</h1>
         </div>
             )
+}
+
+function Card1(props) {
+    return (
+        <div className="card col-3 m-4" key={props.id}>
+  <img src = {"public/" + props.img} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">{props.titu}</h5>
+    <p className="card-text">{props.para}</p>
+    <a href={props.link} className="btn btn-primary">Saiba mais!</a>
+  </div>
+</div>
+    )
 }
 function ItemSocial() {
     const redesSociais = [
@@ -48,41 +59,62 @@ function ItemSocial() {
     )  
 }
 
-function ConteudoCard () {
+function Produtos () {
     const conteudos = [ 
         {
-        id: 6,
-        titu:'Um jogo',
-        img: {image},
-        para: 'Este jogo é bem legal',
-        link: 'https://pt-br.facebook.com/playstation'
+            id: 6,
+            titu:'Se eu não me engano esse é o unchartege',
+            img: 'game1.jpg',
+            para: 'Não ei sobre o que se trata',
+            link: 'https://pt-br.facebook.com/playstation'
+        },
+        {
+            id: 7,
+            titu:'Esse é brabo, fifinha da massa',
+            img: 'fifa-22-mbappe-cover.jpg',
+            para: 'O Mbappe manda o papo',
+            link: 'https://pt-br.facebook.com/playstation'
+        },
+        {
+            id: 8,
+            titu:'ATREEUUUUSSSS',
+            img: 'god-of-war.png',
+            para: 'Kratos o paizão brabo',
+            link: 'https://pt-br.facebook.com/playstation'
         },
     ]
 
     return (
         conteudos.map(conteudo=>(
-            <div className="card" style="width: 18rem;">
-  <img src={conteudo.img} className="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h5 className="card-title">{conteudo.titu}</h5>
-    <p class="card-text">{conteudo.para}</p>
-    <a href={conteudo.link} className="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+            <div className="col-4">
+                 <Card1 titu={conteudo.titu} img={conteudo.img} para={conteudo.para} link={conteudo.link} />
+            </div>
+//     <div className="card col-3 m-4" key={conteudo.id}>
+//   <img src={conteudo.img} className="card-img-top" alt="..."/>
+//   <div class="card-body">
+//     <h5 className="card-title">{conteudo.titu}</h5>
+//     <p class="card-text">{conteudo.para}</p>
+//     <a href={conteudo.link} className="btn btn-primary">Saiba mais!</a>
+//   </div>
+// </div>
         ))
     )
 }
 
 function Main() {
-    return (
-           <ConteudoCard />
+    return ( 
+        <div className="container-fluid">
+    <div className="row">
+                <Produtos />
+           </div>
+           </div>
     )
 }
 
 function Footer() {
     return (
         <div className="bg-info">
-            <ul className="container nav justify-content-center ">
+            <ul className="container nav justify-content-center">
                <ItemSocial />
             </ul>
         </div>
