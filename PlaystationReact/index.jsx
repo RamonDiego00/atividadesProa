@@ -1,9 +1,17 @@
+// Ramon e Gustavo
+function Sony() {
+  return (
+    <div className="sony">
+      <img className="logoSony" src="./img/logoSony.png" alt="" srcset="" />
+    </div>
+  )
+}
 function Cabecalho() {
     return(
 <nav className="navbar navbar-expand-lg navbar">
   <div className="container-fluid bg-ligth">
     <a className="navbar-brand" href="#">
-      <img className="logo" src="https://o.remove.bg/downloads/d7215436-1d38-41f8-a1a0-fef5fc11c765/image-removebg-preview.png" alt="" srcset="" />
+      <img className="logo" src="https://i.pinimg.com/originals/6b/29/c6/6b29c65d5c07bc3efa1db830151d753e.png" alt="" srcset="" />
     </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -16,8 +24,11 @@ function Cabecalho() {
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
             <li>
-                <img src="https://o.remove.bg/downloads/452f8889-7f33-4582-9283-c09187bb8d22/image-removebg-preview.png" alt="" srcset="" />
-                <span>PS5</span>
+            <div className="d-flex row teste">
+            <Consoles />
+            <Hr />
+            <Links/>
+            </div>
             </li>
           </ul>
         </li>
@@ -87,22 +98,87 @@ function Cabecalho() {
     )
 } 
 
-function Sony() {
-  return (
-    <div className="sony">
-      <img className="logoSony" src="https://o.remove.bg/uploads/317d8334-b23c-462d-87d8-779199e48f15/image.png" alt="" srcset="" />
-    </div>
+function Hr() {
+  return(
+    <hr className="hr" />
   )
 }
+
+function Links() {
+  return(
+    <div>
+  <ul className="ul">
+    <li className="links">teste</li>
+    <li className="links">teste</li>
+    <li className="links">teste</li>
+    <li className="links">teste</li>
+  </ul>
+</div>
+  )
+
+}
+
+
+function IconesGames(props) {
+  return (
+    <div className="" key={props.id}>
+        <img className="icones" src={"img/"+ props.img} alt="" />
+        <p className="">{props.texto}</p>
+    </div>
+)  
+               }
+
+  function Consoles () {
+  const conteudos = [ 
+      {
+          id: 1,
+          img: 'PS5.png',
+          texto: 'PS5'
+      },
+      {
+          id: 2,
+          img: 'PS4.png',
+          texto: 'PS4'
+      },
+      {
+          id: 3,
+          img: 'PS VR.png',
+          texto: 'PS VR'
+      },
+      {
+        id: 4,
+        img: 'PS PLUS.png',
+        texto: 'PS Plus',
+
+    },
+    {
+      id: 5,
+      img: 'compras.png',
+      texto: 'Comprar Jogos',
+
+  },
+  ]
+
+  return (
+      conteudos.map(conteudo=>(
+          <div className="col-2">
+                <IconesGames img={conteudo.img} texto={conteudo.texto}/>
+          </div>
+      ))
+  )
+}
+
 
 function Template() {
     return(
         <div>
             <Sony />
             <Cabecalho />
+            
         </div>
     )
 }
+// Ramon e Gustavo
 
     let template = <Template/>;
 
