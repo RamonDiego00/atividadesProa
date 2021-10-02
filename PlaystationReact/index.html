@@ -29,35 +29,56 @@
             padding-top: 0px;
             display: flex;
             flex-direction: row;
+            list-style-type: none;
         }
         li {
             font-family: play;
             font-size: 13px;
             font-weight: 600;
             line-height: 21px;
-            margin-left: 10px;
+            margin-left: 0px;
         }
+        ul .links::before {
+            content: "\2022"; 
+            color: #0070D1; 
+            font-weight: bold; 
+            display: inline-block; 
+            width: 1em; 
+            margin-left: -1em; 
+                        }
         a {
             color: black !important;
+            font-family: play;
         }
         a:hover {
             color: #0070D1 !important;
+        }
+        nav{
+            margin-top: -20px;
+            position: fixed;
+            top:0;
+            left: 0;
         }
         .icones{
             width: 70px;
         }
         .logo {
-            width: 30px;
+            width: 50px;
         }
         .btn-header{
-            background-color: #606060;
+            background-color: #363636;
             padding: 2px;
             color: #ffff;
             text-align: center;
+            font-weight: 500;
+            vertical-align: text-top;
+            width: 110px;
+            height: 25px;
         }
         .sony{
             background-color: black;
             text-align: end;
+            height: 40px;
         }
         .logoSony{
             width: 80px;
@@ -65,10 +86,11 @@
             /* Ramon e Gustavo*/
         }
         .dropdown-menu{
-            width: 1000px;
+            width: 1280px;
             border: hidden;
             border-bottom: black;
             box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.466);
+            margin: -70px;
         }
         .teste {
             text-align: center;
@@ -76,8 +98,11 @@
         }
         .links{
             text-align: center;
-            margin-left: 200px;
+            margin-left: 150px;
             text-align: center;
+        }
+        .links:hover{
+            color:#0070D1 ;
         }
     </style>
     </head>

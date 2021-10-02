@@ -19,7 +19,7 @@ function Cabecalho() {
     <div className="collapse navbar-collapse" id="navbarScroll">
       <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
       <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link dropdown-toggle container-fluid" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Jogos
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -37,10 +37,13 @@ function Cabecalho() {
             Hardware
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          <div className="d-flex row teste">
+            <Consoles>
+
+            </Consoles>
+            <Hr />
+            <Links/>
+            </div>
           </ul>
         </li>
         <li className="nav-item dropdown">
@@ -48,10 +51,11 @@ function Cabecalho() {
             Serviços
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          <div className="d-flex row teste">
+            <Consoles />
+            <Hr />
+            <Links/>
+            </div>
           </ul>
         </li>
         <li className="nav-item dropdown">
@@ -59,10 +63,11 @@ function Cabecalho() {
             Notícias
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          <div className="d-flex row teste">
+            <Consoles />
+            <Hr />
+            <Links/>
+            </div>
           </ul>
         </li>
         <li className="nav-item dropdown">
@@ -70,10 +75,11 @@ function Cabecalho() {
             Loja
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          <div className="d-flex row teste">
+            <Consoles />
+            <Hr />
+            <Links/>
+            </div>
           </ul>
         </li>
         <li className="nav-item dropdown">
@@ -81,10 +87,11 @@ function Cabecalho() {
             Suporte
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          <div className="d-flex row teste">
+            <Consoles />
+            <Hr />
+            <Links/>
+            </div>
           </ul>
         </li>
       </ul>
@@ -98,6 +105,8 @@ function Cabecalho() {
     )
 } 
 
+//Funções complementares
+
 function Hr() {
   return(
     <hr className="hr" />
@@ -108,10 +117,10 @@ function Links() {
   return(
     <div>
   <ul className="ul">
-    <li className="links">teste</li>
-    <li className="links">teste</li>
-    <li className="links">teste</li>
-    <li className="links">teste</li>
+    <li className="links">PlayStation Indies</li>
+    <li className="links">Jogos para PS4 no PS5</li>
+    <li className="links">PlayStation Hits</li>
+    <li className="links">Ofertas e promoções</li>
   </ul>
 </div>
   )
@@ -127,37 +136,37 @@ function IconesGames(props) {
     </div>
 )  
                }
+               const conteudos = [ 
+                {
+                    id: 1,
+                    img: 'PS5.png',
+                    texto: 'PS5'
+                },
+                {
+                    id: 2,
+                    img: 'PS4.png',
+                    texto: 'PS4'
+                },
+                {
+                    id: 3,
+                    img: 'PS VR.png',
+                    texto: 'PS VR'
+                },
+                {
+                  id: 4,
+                  img: 'PS PLUS.png',
+                  texto: 'PS Plus',
+          
+              },
+              {
+                id: 5,
+                img: 'compras.png',
+                texto: 'Comprar Jogos',
+          
+            },
+            ]
 
   function Consoles () {
-  const conteudos = [ 
-      {
-          id: 1,
-          img: 'PS5.png',
-          texto: 'PS5'
-      },
-      {
-          id: 2,
-          img: 'PS4.png',
-          texto: 'PS4'
-      },
-      {
-          id: 3,
-          img: 'PS VR.png',
-          texto: 'PS VR'
-      },
-      {
-        id: 4,
-        img: 'PS PLUS.png',
-        texto: 'PS Plus',
-
-    },
-    {
-      id: 5,
-      img: 'compras.png',
-      texto: 'Comprar Jogos',
-
-  },
-  ]
 
   return (
       conteudos.map(conteudo=>(
@@ -179,10 +188,9 @@ function Template() {
     )
 }
 // Ramon e Gustavo
-
     let template = <Template/>;
-
     ReactDOM.render(
         template,
         document.getElementById('root')
+        
     )
