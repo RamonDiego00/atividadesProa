@@ -343,12 +343,32 @@ conteudos.map(conteudo=>(
 )
 }
 
+function PlayPlus() {
+  return(
+			<div class="row align-items-center bg-Plus">
+				<div className="col-6 plau">
+          <div className="centralizar">
+					<img className="PlusPlus" src="./img/Playplus2.png"  alt="" />
+          <p className="playplay">Melhore sua experiência PlayStation com o modo multijogador online, jogos mensais, descontos exclusivos e muito mais.</p>
+					<button class="btn btn-plus rounded-pill m-4">Explore o PlayStation Plus 
+					</button>
+          </div>
+				</div>
+				<div class="col-6">
+					<img className="Hitman d-block" src="./img/PlayPlus.png" alt=""/>
+				</div>
+			</div>
+		  
+  )
+}
+
 
 function Template() {
     return(
         <div>
             <Sony />
             <Cabecalho />
+            <PlayPlus />
         </div>
     )
 }
